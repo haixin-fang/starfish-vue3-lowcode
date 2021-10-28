@@ -121,6 +121,7 @@ export default defineComponent({
         mode: "code",
         search: false,
       };
+      
       // console.log(window.JSONEditor)
       jsonEditor = new window.JSONEditor(jsonDom, options);
       jsonEditor.set(allmainList.value)
