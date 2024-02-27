@@ -1,0 +1,57 @@
+{
+  "name": "starfish-editor",
+  "version": "1.0.16",
+  "publish": false,
+  "main": "dist/starfish-editor.umd.js",
+  "style": "dist/style.css",
+  "module": "dist/starfish-editor.es.js",
+  "types": "dist/types/starfish-editor.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/starfish-editor.es.js",
+      "require": "./dist/starfish-editor.umd.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepublish": "npm version && npm run build"
+  },
+  "dependencies": {
+    "@babel/core": "^7.18.5",
+    "@codemirror/lang-css": "^6.0.0",
+    "@codemirror/lang-html": "^6.1.0",
+    "@codemirror/lang-javascript": "^6.0.2",
+    "@codemirror/lang-json": "^6.0.0",
+    "clipboard": "^2.0.11",
+    "codemirror": "^6.0.1",
+    "core-js": "^3.6.5",
+    "element-plus": "^2.2.12",
+    "gesto": "^1.9.0",
+    "jsoneditor": "^9.9.0",
+    "keycon": "^1.1.2",
+    "mitt": "^3.0.0",
+    "nanoid": "^4.0.0",
+    "starfish-form": "^1.1.2",
+    "vue": "^3.2.37",
+    "vue-codemirror": "^6.1.1",
+    "vuedraggable": "^4.1.0",
+    "wangeditor": "^4.7.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "cross-env": "^7.0.3",
+    "live-server": "^1.2.2",
+    "rollup-plugin-visualizer": "^5.8.3",
+    "sass": "^1.42.1",
+    "typescript": "^4.3.4",
+    "vite": "^2.9.12",
+    "vite-plugin-dts": "^1.2.0",
+    "vue-tsc": "^0.34.7"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "vue-form-design",
+  "version": "1.0.0-alpha.2",
+  "private": true,
+  "packageManager": "pnpm@7.1.9",
+  "scripts": {
+    "dev": "pnpm --filter \"starfish-playground\" dev",
+    "serve": "pnpm --filter \"starfish-editor\" serve",
+    "pg": "pnpm --filter \"starfish-playground\" dev",
+    "bootstrap": "pnpm i && pnpm prepare",
+    "lint-fix": "npx eslint . --fix --ext .vue,.js,.ts,.tsx",
+    "clean:top": "rimraf */**/dist */dist ",
+    "clean:modules": "rimraf node_modules **/node_modules **/**/node_modules",
+    "clean:all": "pnpm clean:top && pnpm clean:modules",
+    "prepare": "husky install",
+    "build": "pnpm clean:top && pnpm --filter \"starfish-*\" build",
+    "commit": "git-cz"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:haixin-fang/vue-form-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/haixin-fang/vue-form-design/issues"
+  },
+  "author": "haixin-fang",
+  "license": "MIT",
+  "keywords": [
+    "Vite",
+    "Vue3",
+    "lowcode",
+    "form",
+    "starfish",
+    "vue",
+    "editor",
+    "drag",
+    "resize",
+    "typescript",
+    "element-plus",
+    "表单",
+    "动态表单",
+    "低代码"
+  ],
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.0.2",
+    "@types/node": "^18.6.5",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.4",
+    "commitlint": "^17.0.2",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "4.1.5",
+    "vite": "^2.9.12"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
